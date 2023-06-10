@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Roadpax/static/css/main.9f136426.css",
+    "main.js": "/Roadpax/static/js/main.0bcd45b8.js",
+    "static/js/787.34488534.chunk.js": "/Roadpax/static/js/787.34488534.chunk.js",
+    "static/media/video-place-holder.png": "/Roadpax/static/media/video-place-holder.5f8fc1bb9401571cbfad.png",
+    "static/media/car-map.png": "/Roadpax/static/media/car-map.f04e0615c7e83d078fad.png",
+    "static/media/car-blue.png": "/Roadpax/static/media/car-blue.9077c9de0ebdd0884c64.png",
+    "static/media/car-yellow.png": "/Roadpax/static/media/car-yellow.6897e3dd769cd1d0ca39.png",
+    "static/media/gallery-2.png": "/Roadpax/static/media/gallery-2.cdb30b728b18031b3751.png",
+    "static/media/gallery-3.png": "/Roadpax/static/media/gallery-3.b7cd523798fb2d41ab33.png",
+    "static/media/gallery-1.png": "/Roadpax/static/media/gallery-1.73d728960e28110144fc.png",
+    "static/media/length-logo.svg": "/Roadpax/static/media/length-logo.f9c0dbbb8b3bb5026e11b2632a971bbb.svg",
+    "static/media/gallery-lines.svg": "/Roadpax/static/media/gallery-lines.8d064cf46a9d1c756f106385596fe815.svg",
+    "static/media/hyd-icon.svg": "/Roadpax/static/media/hyd-icon.254632ca0a31af18bb37acdc8efb555a.svg",
+    "static/media/adorable-icon.svg": "/Roadpax/static/media/adorable-icon.c72a9a2dd576d4bc9be738b4bf75e91b.svg",
+    "static/media/car-icon.svg": "/Roadpax/static/media/car-icon.01d4617242e1848165975899e2e79fc6.svg",
+    "static/media/ig.svg": "/Roadpax/static/media/ig.3ed680832a87ec91491e0ad6704632a9.svg",
+    "static/media/air-icon.svg": "/Roadpax/static/media/air-icon.5cc41e17e15ec7f27441cc5ac681da57.svg",
+    "static/media/hygine-icon.svg": "/Roadpax/static/media/hygine-icon.aa4ec418adecc20baa231a229f5b6945.svg",
+    "static/media/lucky-icon.svg": "/Roadpax/static/media/lucky-icon.de8f3574e462def3deae68d6e4068732.svg",
+    "static/media/family-icon.svg": "/Roadpax/static/media/family-icon.1aaa3db95883446be64b54a8b8a341b9.svg",
+    "static/media/call-icon.svg": "/Roadpax/static/media/call-icon.2553fc2ef5554fcb58c7c8b650bc4131.svg",
+    "static/media/prof-icon.svg": "/Roadpax/static/media/prof-icon.e1fb30202e97fc175b6b0760a0e9d8ec.svg",
+    "static/media/comfort-icon.svg": "/Roadpax/static/media/comfort-icon.5a9f73fbbd3419368d1a550dd865728a.svg",
+    "static/media/twit.svg": "/Roadpax/static/media/twit.d0dc65fe4de7bfddf278566c95db6d4e.svg",
+    "index.html": "/Roadpax/index.html",
+    "static/media/yt.svg": "/Roadpax/static/media/yt.d92f82e1cb3a3e72b9a535dfb0377497.svg",
+    "static/media/mailIcon.svg": "/Roadpax/static/media/mailIcon.60f19b5460dd60125004378fbc74a077.svg",
+    "static/media/userIcon.svg": "/Roadpax/static/media/userIcon.69420785871e36767f71e8638486496d.svg",
+    "static/media/fb.svg": "/Roadpax/static/media/fb.e8ecda2204242435be4cc61be0c308da.svg",
+    "static/media/feature-lines.svg": "/Roadpax/static/media/feature-lines.7e958194d6506e92072eea53448044a9.svg",
+    "static/media/scroll-to-top.svg": "/Roadpax/static/media/scroll-to-top.d86c90e94741cb555fd41d7b24252cf7.svg",
+    "main.9f136426.css.map": "/Roadpax/static/css/main.9f136426.css.map",
+    "main.0bcd45b8.js.map": "/Roadpax/static/js/main.0bcd45b8.js.map",
+    "787.34488534.chunk.js.map": "/Roadpax/static/js/787.34488534.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f136426.css",
+    "static/js/main.0bcd45b8.js"
+  ]
+}
