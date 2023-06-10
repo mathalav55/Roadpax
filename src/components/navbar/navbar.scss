@@ -1,0 +1,50 @@
+.navbar {
+  .nav-links {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0px 4px 13px rgba(112, 34, 34, 0.1);
+    backdrop-filter: blur(4.5px);
+
+    padding: 1rem 5vw;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      .left,
+      .right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .middle {
+        width: 100%;
+      }
+      li {
+        // width: calc(100%/6);
+        text-align: center;
+        a {
+          color: #817800;
+        }
+        button {
+          background-color: #feed01;
+          img {
+            display: block;
+          }
+        }
+        button:hover {
+          cursor: pointer;
+        }
+        button.call {
+          border-radius: 50%;
+          padding: 0.75rem;
+        }
+        button.login {
+          border-radius: 1.5rem;
+          padding: 0.5rem 1.75rem;
+          font-weight: 400;
+          color: #817800;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
