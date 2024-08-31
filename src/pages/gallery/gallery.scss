@@ -1,0 +1,56 @@
+.gallery{
+    padding: 5rem 3rem;
+    .title{
+        margin: 1rem 0;
+        h1{
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
+    .body{
+        width: 80%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item{
+            width: 30%;
+            margin-bottom: 2rem;
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+            .location{
+                p{
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .gallery{
+        padding: 1rem 2rem;
+        .body{
+            width: 90%;
+            .item{
+                width: 45%;
+            }
+        }
+    }
+}
+@media screen and (max-width : 468px) {
+    .gallery{
+        padding: 1rem 2rem;
+        .body{
+            width: 90%;
+            .item{
+                width: 100%;
+            }
+        }
+    }
+}

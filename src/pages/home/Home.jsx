@@ -1,10 +1,10 @@
 import "./home.scss";
-import homePlaceHolder from "../../assets/img/video-place-holder.png";
 import carMap from "../../assets/img/car-map.png";
 import carBlue from "../../assets/img/car-blue.png";
 import airIcon from "../../assets/img/air-icon.svg";
 import carIcon from "../../assets/img/car-icon.svg";
 import hydIcon from "../../assets/img/hyd-icon.svg";
+import eventIcon from "../../assets/img/events-icon.svg";
 import carYellow from "../../assets/img/car-yellow.png";
 import featureLines from "../../assets/img/feature-lines.svg";
 import comfortIocn from "../../assets/img/comfort-icon.svg";
@@ -14,25 +14,20 @@ import profIocn from "../../assets/img/prof-icon.svg";
 import affordIocn from "../../assets/img/adorable-icon.svg";
 import hygineIocn from "../../assets/img/hygine-icon.svg";
 import galleryLines from "../../assets/img/gallery-lines.svg";
-import gallery1 from "../../assets/img/gallery-1.png";
-import gallery2 from "../../assets/img/gallery-2.png";
-import gallery3 from "../../assets/img/gallery-3.png";
-
+import headVideo from "../../assets/videos/head-video.mp4";
+import { galleryImages } from "../../assets/gallery";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
-  const galleryImages = [
-    {
-      location: "Rio de Janero",
-      img: gallery1,
-    },
-    {
-      location: "Tirupati",
-      img: gallery2,
-    },
-    {
-      location: "Beunos Aeries",
-      img: gallery3,
-    },
-  ];
+  const gallery = galleryImages.slice(0, 3);
+
+  const openModel = () => {
+    document.querySelector(".model").classList.add("active");
+  };
+  const closeModel = () => {
+    document.querySelector(".model").classList.remove("active");
+  };
+
+  const navigate = useNavigate();
   const featureIcons = [
     {
       title: "Comfort",
@@ -69,40 +64,68 @@ export default function Home() {
     {
       icon: airIcon,
       title: "Airport Pickup",
-      desc: `Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s.`,
+      desc: `Efficient and reliable airport pickup service, ensuring a seamless transition from landing to your destination.`,
     },
     {
       icon: carIcon,
       title: "Vacations",
-      desc: `Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s.`,
+      desc: `Reliable and hassle-free vacation car service, making your travel experience comfortable and convenient.`,
     },
     {
       icon: hydIcon,
-      title: "Locations Vacations",
-      desc: `Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s.`,
+      title: "Local Vacations",
+      desc: `Convenient and flexible local vacation car service, enhancing your exploration and enjoyment of the area.`,
     },
     {
-      icon: airIcon,
-      title: "Airport Pickup",
-      desc: `Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s.`,
+      icon: eventIcon,
+      title: "Events",
+      desc: `Convenient and punctual local events car service, ensuring a stress-free transportation experience for your special occasions.`,
     },
   ];
   return (
     <>
+      <div className="model">
+        <div className="container">
+          <div className="close-icon">
+            <h1 onClick={closeModel}>+</h1>
+          </div>
+          <h1>Coming Soon...</h1>
+          <div className="contact">
+            <p>
+              We are under construction. <br /> Meanwhile contact us on below
+              details
+            </p>
+            <div className="body">
+              <div className="contact-details">
+                <div className="detail location">
+                  <a
+                    href="https://goo.gl/maps/7kFv4eVLjakz28YY7"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Roadpax India - Private car rentals Park K P H B Phase 9,
+                    Kukatpally, Hyderabad, Telangana 500085
+                  </a>
+                </div>
+                <div className="detail phone">
+                  <a href="tel:918074338043">+91 80743 38043</a>
+                </div>
+                <div className="detail mail">
+                  <a href="mailto:info.roadpax@gmail.com">
+                    info.roadpax@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="home">
         <div className="header">
           <div className="head-main">
             <div className="head-video">
-              {/* <video src=""></video> */}
-              <img src={homePlaceHolder} alt="" />
+              <video src={headVideo} autoPlay muted loop></video>
+              {/* <img src={homePlaceHolder} alt="" /> */}
             </div>
             <div className="head-text">
               <div className="title">
@@ -117,7 +140,12 @@ export default function Home() {
             <div className="body">
               <div className="col">
                 <div className="date-container">
-                  <input type="date" name="" id="" />
+                  <input
+                    type="date"
+                    name=""
+                    id=""
+                    value={new Date().toISOString().slice(0, 10)}
+                  />
                   <img src="" alt="" />
                 </div>
               </div>
@@ -125,6 +153,9 @@ export default function Home() {
                 <div className="type-container">
                   <div className="location-container">
                     <select name="" id="">
+                      <option value="" disabled selected>
+                        Car type
+                      </option>
                       <option value="">option1</option>
                       <option value="">option2</option>
                       <option value="">option3</option>
@@ -135,14 +166,17 @@ export default function Home() {
               </div>
               <div className="col">
                 <select name="" id="">
-                  <option value="">option1</option>
-                  <option value="">option2</option>
-                  <option value="">option3</option>
+                  <option value="" disabled selected>
+                    Location
+                  </option>
+                  <option value="">Gachibowli</option>
+                  <option value="">Kukatpally</option>
+                  <option value="">Jubilie Hills</option>
                 </select>
                 <img src="" alt="" />
               </div>
               <div className="col submit-container">
-                <button>Book Now</button>
+                <button onClick={openModel}>Book Now</button>
               </div>
             </div>
           </div>
@@ -155,21 +189,23 @@ export default function Home() {
             <div className="col">
               <div className="desc">
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
+                  Welcome to our car travel service! We are your trusted partner
+                  for all your transportation needs. With a focus on
+                  convenience, reliability, and customer satisfaction, we
+                  provide top-notch car travel services tailored to your
+                  requirements.
                 </p>
               </div>
               <div className="book-btn">
-                <button>Book now</button>
+                <button onClick={openModel}>Book now</button>
               </div>
               <div className="stats">
                 <div className="col">
-                  <h1 className="stat">100+</h1>
+                  <h1 className="stat">300+</h1>
                   <p className="stat-name">Satisfied customers</p>
                 </div>
                 <div className="col">
-                  <h1 className="stat">100+</h1>
+                  <h1 className="stat">10+</h1>
                   <p className="stat-name">Destinations</p>
                 </div>
                 <div className="col">
@@ -188,7 +224,10 @@ export default function Home() {
             <div className="col">
               {services.map((rec, i) => {
                 return (
-                  <div className="service">
+                  <div
+                    className={`service ${i % 2 !== 0 ? "reverse" : ""}`}
+                    key={`service-${i}`}
+                  >
                     <div className="icon">
                       <img src={rec.icon} alt="" />
                     </div>
@@ -218,7 +257,7 @@ export default function Home() {
               <img src={carYellow} alt="" />
             </div>
             <div className="icons">
-              <div className="icon-image">
+              <div className="icon-lines">
                 <img src={featureLines} alt="" />
               </div>
               <div className="icon-cards">
@@ -237,6 +276,7 @@ export default function Home() {
                             .querySelector(".car-yellow")
                             .classList.remove(rec.name);
                         }}
+                        key={`icon-${i}`}
                       >
                         <div className="icon-image">
                           <img src={rec.icon} alt="" />
@@ -250,6 +290,7 @@ export default function Home() {
                   {featureIcons.slice(3).map((rec, i) => {
                     return (
                       <div
+                        key={`feature-${i}`}
                         className="icon-card"
                         onMouseOver={() => {
                           document
@@ -285,7 +326,7 @@ export default function Home() {
               <img src={galleryLines} alt="" />
             </div>
             <div className="photo-cards">
-              {galleryImages.map((rec, i) => {
+              {gallery.map((rec, i) => {
                 return (
                   <div className="photo-card" key={`photo-card-${i}`}>
                     <div className="photo">
@@ -300,7 +341,13 @@ export default function Home() {
             </div>
           </div>
           <div className="more-btn">
-            <button>and many more...</button>
+            <button
+              onClick={() => {
+                navigate("/gallery");
+              }}
+            >
+              and many more...
+            </button>
           </div>
         </div>
       </div>

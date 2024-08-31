@@ -7,6 +7,8 @@ import twit from "../../assets/img/twit.svg";
 import mailIcon from "../../assets/img/mailIcon.svg";
 import userIcon from "../../assets/img/userIcon.svg";
 import "./footer.scss";
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 export default function Footer() {
   const socialLinks = [
     {
@@ -26,6 +28,7 @@ export default function Footer() {
       link: "",
     },
   ];
+  const location = useLocation();
   return (
     <>
       <div className="footer">
@@ -36,9 +39,9 @@ export default function Footer() {
             </div>
             <div className="desc">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Morbi
-                lorem tellus, dignissim at dui sit amet, sagittis mattis elit
-                pellentesque convallis.
+                At Roadpax, we provide exceptional transportation services,
+                offering comfort, reliability, and a seamless travel experience
+                for our valued customers.
               </p>
             </div>
           </div>
@@ -46,16 +49,21 @@ export default function Footer() {
             <div className="links">
               <ul>
                 <li>
-                  <Link to="/about">About Us</Link>
+                  {location.pathname === "/" ? (
+                    <HashLink to="#about">About Us</HashLink>
+                  ) : (
+                    <Link to="/">About Us</Link>
+                  )}
                 </li>
                 <li>
-                  <Link to="/services">Services</Link>
+                  {location.pathname === "/" ? (
+                    <HashLink to="#services">Services</HashLink>
+                  ) : (
+                    <Link to="/">Services</Link>
+                  )}
                 </li>
                 <li>
                   <Link to="/gallery">Gallery</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -78,7 +86,12 @@ export default function Footer() {
                 <img src={userIcon} alt="" />
               </div>
               <div className="input-field-container input">
-                <input type="email" name="" id="" placeholder="enter your email..." />
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="enter your email..."
+                />
                 <img src={mailIcon} alt="" />
               </div>
               <div className="input-field-container submit">
